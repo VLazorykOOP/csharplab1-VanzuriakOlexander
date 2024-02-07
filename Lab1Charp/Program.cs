@@ -67,8 +67,42 @@ static void task4()
     }
 }
 
+static int sub(int a, int b) {
+    return a - b;
+}
+
+static void task5() {
+    Console.WriteLine("Task5");
+    Console.Write("Enter a=");
+    int a = 0;
+    int b = 0;
+    string? str = Console.ReadLine();
+    if (str != null) a = int.Parse(str);
+    Console.Write("Enter b=");
+    str = Console.ReadLine();
+    if (str != null) b = int.Parse(str);
+    Console.WriteLine("The a-b = " + sub(a, b));
+}
+
+static void task6() {
+    Console.WriteLine("Task 6");
+    Console.Write("Enter x=");
+    string? str = Console.ReadLine();
+    float x = 0;
+    float y = 0;
+    if (str != null) x = float.Parse(str);
+    Console.Write("Enter y=");
+    str = Console.ReadLine();
+    if (str != null) y = float.Parse(str);
+    double result = (1/(x*y) + 1/(Math.Pow(x, 2) + 1))*(x+y);
+    Console.WriteLine("The result is " + result);
+
+}
+
 Console.WriteLine("Lab 1 !");
 task1();
 task2();
 task3();
 task4();
+task5();
+task6();
